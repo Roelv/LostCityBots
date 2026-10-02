@@ -1,0 +1,411 @@
+{
+  "nodes": [
+    {
+      "coord": [ 3094, 3107 ],
+      "radius": 2,
+      "name": "runescape guide",
+      "links": [ { "coord": [ 3097, 3107 ] } ]
+    },
+    {
+      "coord": [ 3097, 3107 ],
+      "links": [
+        { "coord": [ 3094, 3107 ] },
+        { "coord": [ 3098, 3107 ] }
+      ]
+    },
+    {
+      "coord": [ 3098, 3107 ],
+      "links": [
+        { "coord": [ 3097, 3107 ] },
+        { "coord": [ 3103, 3096 ] }
+      ]
+    },
+    {
+      "coord": [ 3103, 3096 ],
+      "radius": 2,
+      "name": "survival expert",
+      "links": [
+        { "coord": [ 3098, 3107 ] },
+        { "coord": [ 3090, 3092 ] }
+      ]
+    },
+    {
+      "coord": [ 3090, 3092 ],
+      "links": [
+        { "coord": [ 3103, 3096 ] },
+        {
+          "coord": [ 3089, 3092 ],
+          "action": {
+            "interact": {
+              "option": "open",
+              "loc": "gate",
+              "range": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "coord": [ 3089, 3092 ],
+      "links": [
+        {
+          "coord": [ 3090, 3092 ],
+          "action": {
+            "interact": {
+              "option": "open",
+              "loc": "gate",
+              "range": 1
+            }
+          }
+        },
+        { "coord": [ 3079, 3084 ] }
+      ]
+    },
+    {
+      "coord": [ 3079, 3084 ],
+      "links": [
+        { "coord": [ 3089, 3092 ] },
+        { "coord": [ 3078, 3084 ] }
+      ]
+    },
+    {
+      "coord": [ 3078, 3084 ],
+      "links": [
+        { "coord": [ 3079, 3084 ] },
+        { "coord": [ 3075, 3084 ] }
+      ]
+    },
+    {
+      "coord": [ 3075, 3084 ],
+      "radius": 1,
+      "name": "master chef",
+      "links": [
+        { "coord": [ 3078, 3084 ] },
+        { "coord": [ 3073, 3090 ] }
+      ]
+    },
+    {
+      "coord": [ 3073, 3090 ],
+      "links": [
+        { "coord": [ 3075, 3084 ] },
+        { "coord": [ 3072, 3090 ] }
+      ]
+    },
+    {
+      "coord": [ 3072, 3090 ],
+      "name": "master chef outside",
+      "links": [
+        { "coord": [ 3073, 3090 ] },
+        { "coord": [ 3086, 3126 ] }
+      ]
+    },
+    {
+      "coord": [ 3086, 3126 ],
+      "links": [
+        { "coord": [ 3072, 3090 ] },
+        { "coord": [ 3086, 3125 ] }
+      ]
+    },
+    {
+      "coord": [ 3086, 3125 ],
+      "links": [
+        { "coord": [ 3086, 3126 ] },
+        { "coord": [ 3086, 3122 ] }
+      ]
+    },
+    {
+      "coord": [ 3086, 3122 ],
+      "radius": 1,
+      "name": "quest guide",
+      "links": [
+        { "coord": [ 3086, 3125 ] },
+        { "coord": [ 3088, 3120 ] }
+      ]
+    },
+    {
+      "coord": [ 3088, 3120 ],
+      "links": [
+        { "coord": [ 3086, 3122 ] },
+        {
+          "coord": [ 3088, 9520 ],
+          "action": {
+            "interact": {
+              "option": "climb-down",
+              "loc": "ladder",
+              "range": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "coord": [ 3088, 9520 ],
+      "links": [
+        {
+          "coord": [ 3088, 3120 ],
+          "action": {
+            "interact": {
+              "option": "climb-up",
+              "loc": "ladder",
+              "range": 1
+            }
+          }
+        },
+        { "coord": [ 3080, 9505 ] }
+      ]
+    },
+    {
+      "coord": [ 3080, 9505 ],
+      "radius": 1,
+      "name": "mining instructor",
+      "links": [
+        { "coord": [ 3088, 9520 ] },
+        { "coord": [ 3094, 9503 ] }
+      ]
+    },
+    {
+      "coord": [ 3094, 9503 ],
+      "links": [
+        { "coord": [ 3080, 9505 ] },
+        {
+          "coord": [ 3095, 9503 ],
+          "action": {
+            "interact": {
+              "option": "open",
+              "loc": "gate",
+              "range": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "coord": [ 3095, 9503 ],
+      "links": [
+        {
+          "coord": [ 3094, 9503 ],
+          "action": {
+            "interact": {
+              "option": "open",
+              "loc": "gate",
+              "range": 1
+            }
+          }
+        },
+        { "coord": [ 3106, 9509 ] }
+      ]
+    },
+    {
+      "coord": [ 3106, 9509 ],
+      "radius": 1,
+      "name": "combat instructor",
+      "links": [
+        { "coord": [ 3095, 9503 ] },
+        { "coord": [ 3111, 9518 ] }
+      ]
+    },
+    {
+      "coord": [ 3111, 9518 ],
+      "name": "combat instructor ranged",
+      "links": [
+        { "coord": [ 3106, 9509 ] },
+        {
+          "coord": [ 3110, 9518 ],
+          "action": {
+            "interact": {
+              "option": "open",
+              "loc": "gate",
+              "range": 1
+            }
+          }
+        },
+        { "coord": [ 3111, 9525 ] }
+      ]
+    },
+    {
+      "coord": [ 3110, 9518 ],
+      "links": [
+        {
+          "coord": [ 3111, 9518 ],
+          "action": {
+            "interact": {
+              "option": "open",
+              "loc": "gate",
+              "range": 1
+            }
+          }
+        },
+        { "coord": [ 3103, 9518 ] }
+      ]
+    },
+    {
+      "coord": [ 3103, 9518 ],
+      "radius": 2,
+      "name": "combat instructor rats",
+      "links": [ { "coord": [ 3110, 9518 ] } ]
+    },
+    {
+      "coord": [ 3111, 9525 ],
+      "links": [
+        { "coord": [ 3111, 9518 ] },
+        {
+          "coord": [ 3111, 3125 ],
+          "action": {
+            "interact": {
+              "option": "climb-up",
+              "loc": "ladder",
+              "range": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "coord": [ 3111, 3125 ],
+      "links": [
+        {
+          "coord": [ 3111, 9525 ],
+          "action": {
+            "interact": {
+              "option": "climb-down",
+              "loc": "ladder",
+              "range": 1
+            }
+          }
+        },
+        { "coord": [ 3121, 3122 ] }
+      ]
+    },
+    {
+      "coord": [ 3121, 3122 ],
+      "radius": 1,
+      "name": "tutorial bank",
+      "links": [
+        { "coord": [ 3111, 3125 ] },
+        { "coord": [ 3124, 3124 ] }
+      ]
+    },
+    {
+      "coord": [ 3124, 3124 ],
+      "links": [
+        { "coord": [ 3121, 3122 ] },
+        {
+          "coord": [ 3125, 3124 ],
+          "action": {
+            "interact": {
+              "option": "open",
+              "loc": "door",
+              "range": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "coord": [ 3125, 3124 ],
+      "name": "financial advisor",
+      "links": [
+        {
+          "coord": [ 3124, 3124 ],
+          "action": {
+            "interact": {
+              "option": "open",
+              "loc": "door",
+              "range": 1
+            }
+          }
+        },
+        { "coord": [ 3129, 3124 ] }
+      ]
+    },
+    {
+      "coord": [ 3129, 3124 ],
+      "links": [
+        { "coord": [ 3125, 3124 ] },
+        { "coord": [ 3130, 3124 ] }
+      ]
+    },
+    {
+      "coord": [ 3130, 3124 ],
+      "links": [
+        { "coord": [ 3129, 3124 ] },
+        { "coord": [ 3129, 3107 ] }
+      ]
+    },
+    {
+      "coord": [ 3129, 3107 ],
+      "links": [
+        { "coord": [ 3130, 3124 ] },
+        {
+          "coord": [ 3128, 3107 ],
+          "action": {
+            "interact": {
+              "option": "open",
+              "loc": "large door",
+              "range": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "coord": [ 3128, 3107 ],
+      "links": [
+        {
+          "coord": [ 3129, 3107 ],
+          "action": {
+            "interact": {
+              "option": "open",
+              "loc": "large door",
+              "range": 1
+            }
+          }
+        },
+        { "coord": [ 3125, 3106 ] }
+      ]
+    },
+    {
+      "coord": [ 3125, 3106 ],
+      "radius": 2,
+      "name": "brother brace",
+      "links": [
+        { "coord": [ 3128, 3107 ] },
+        { "coord": [ 3122, 3103 ] }
+      ]
+    },
+    {
+      "coord": [ 3122, 3103 ],
+      "links": [
+        { "coord": [ 3125, 3106 ] },
+        { "coord": [ 3122, 3102 ] }
+      ]
+    },
+    {
+      "coord": [ 3122, 3102 ],
+      "links": [
+        { "coord": [ 3122, 3103 ] },
+        { "coord": [ 3139, 3087 ] }
+      ]
+    },
+    {
+      "coord": [ 3139, 3087 ],
+      "links": [
+        { "coord": [ 3122, 3102 ] },
+        { "coord": [ 3141, 3088 ] }
+      ]
+    },
+    {
+      "coord": [ 3141, 3088 ],
+      "name": "magic instructor",
+      "links": [
+        { "coord": [ 3139, 3087 ] },
+        { "coord": [ 3139, 3091 ] }
+      ]
+    },
+    {
+      "coord": [ 3139, 3091 ],
+      "name": "magic instructor chicken",
+      "links": [ { "coord": [ 3141, 3088 ] } ]
+    }
+  ]
+}

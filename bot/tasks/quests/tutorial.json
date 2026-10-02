@@ -1,0 +1,904 @@
+{
+  "tasks": [
+    {
+      "requires": [
+        {
+          "varp": 281,
+          "value": 0
+        }
+      ],
+      "spots": [ { "name": "runescape guide" } ],
+      "actions": [ { "design": true } ]
+    },
+    {
+      "requires": [
+        {
+          "varp": 281,
+          "value": 1
+        }
+      ],
+      "spots": [ { "name": "runescape guide" } ],
+      "actions": [
+        {
+          "interact": {
+            "option": "talk-to",
+            "npc": "runescape guide"
+          }
+        },
+        { "resume": true },
+        { "button": 2462 },
+        { "resume": true },
+        { "resume": true },
+        { "resume": true },
+        { "resume": true },
+        { "resume": true }
+      ]
+    },
+    {
+      "requires": [
+        {
+          "varp": 281,
+          "min": 4,
+          "max": 10
+        }
+      ],
+      "spots": [ { "name": "survival expert" } ],
+      "actions": [
+        {
+          "interact": {
+            "option": "talk-to",
+            "npc": "survival expert"
+          }
+        },
+        { "resume": true },
+        { "resume": true }
+      ]
+    },
+    {
+      "requires": [
+        {
+          "varp": 281,
+          "value": 20
+        }
+      ],
+      "actions": [ { "tutClickSide": 3 } ]
+    },
+    {
+      "requires": [
+        {
+          "varp": 281,
+          "min": 30,
+          "max": 40
+        },
+        {
+          "inv": "logs",
+          "value": 0
+        }
+      ],
+      "spots": [ { "name": "survival expert" } ],
+      "actions": [
+        {
+          "interact": {
+            "option": "chop down",
+            "loc": "tree",
+            "range": 4
+          }
+        }
+      ]
+    },
+    {
+      "requires": [
+        {
+          "varp": 281,
+          "value": 40
+        },
+        {
+          "inv": "logs",
+          "min": 1
+        }
+      ],
+      "spots": [ { "name": "survival expert" } ],
+      "actions": [
+        {
+          "interact": {
+            "use": "tinderbox",
+            "inv": "logs"
+          }
+        }
+      ]
+    },
+    {
+      "requires": [
+        {
+          "varp": 281,
+          "value": 50
+        }
+      ],
+      "actions": [ { "tutClickSide": 1 } ]
+    },
+    {
+      "requires": [
+        {
+          "varp": 281,
+          "value": 60
+        }
+      ],
+      "spots": [ { "name": "survival expert" } ],
+      "actions": [
+        {
+          "interact": {
+            "option": "talk-to",
+            "npc": "survival expert"
+          }
+        },
+        { "resume": true }
+      ]
+    },
+    {
+      "requires": [
+        {
+          "varp": 281,
+          "min": 70,
+          "max": 80
+        },
+        {
+          "inv": "raw shrimps",
+          "max": 1
+        }
+      ],
+      "spots": [ { "name": "survival expert" } ],
+      "actions": [
+        {
+          "interact": {
+            "option": "net",
+            "npc": "fishing spot"
+          }
+        },
+        {
+          "interact": {
+            "option": "net",
+            "npc": "fishing spot"
+          }
+        }
+      ]
+    },
+    {
+      "requires": [
+        {
+          "varp": 281,
+          "min": 80,
+          "max": 90
+        }
+      ],
+      "spots": [ { "name": "survival expert" } ],
+      "actions": [
+        {
+          "interact": {
+            "option": "chop down",
+            "loc": "tree",
+            "range": 4
+          }
+        },
+        {
+          "interact": {
+            "use": "tinderbox",
+            "inv": "logs"
+          }
+        },
+        {
+          "interact": {
+            "use": "raw shrimps",
+            "loc": "fire",
+            "range": 4
+          }
+        },
+        {
+          "interact": {
+            "use": "raw shrimps",
+            "loc": "fire",
+            "range": 4
+          }
+        }
+      ]
+    },
+    {
+      "requires": [
+        {
+          "varp": 281,
+          "min": 120,
+          "max": 140
+        }
+      ],
+      "spots": [ { "name": "master chef" } ],
+      "actions": [
+        {
+          "interact": {
+            "option": "talk-to",
+            "npc": "master chef"
+          }
+        },
+        { "resume": true },
+        { "resume": true },
+        { "resume": true },
+        { "resume": true }
+      ]
+    },
+    {
+      "requires": [
+        {
+          "varp": 281,
+          "value": 150
+        }
+      ],
+      "actions": [
+        {
+          "interact": {
+            "use": "bucket of water",
+            "inv": "pot of flour"
+          }
+        }
+      ]
+    },
+    {
+      "requires": [
+        {
+          "varp": 281,
+          "value": 160
+        }
+      ],
+      "spots": [ { "name": "master chef" } ],
+      "actions": [
+        {
+          "interact": {
+            "use": "bread dough",
+            "loc": "range"
+          }
+        }
+      ]
+    },
+    {
+      "requires": [
+        {
+          "varp": 281,
+          "value": 170
+        }
+      ],
+      "actions": [ { "tutClickSide": 13 } ]
+    },
+    {
+      "requires": [
+        {
+          "varp": 281,
+          "min": 180,
+          "max": 190
+        }
+      ],
+      "spots": [ { "name": "master chef outside" } ],
+      "actions": [ { "tutClickSide": 12 } ]
+    },
+    {
+      "requires": [
+        {
+          "varp": 281,
+          "value": 195
+        }
+      ],
+      "actions": [ { "button": 153 } ]
+    },
+    {
+      "requires": [
+        {
+          "varp": 281,
+          "min": 200,
+          "max": 220
+        }
+      ],
+      "spots": [ { "name": "quest guide" } ],
+      "actions": [
+        {
+          "interact": {
+            "option": "talk-to",
+            "npc": "quest guide"
+          }
+        },
+        { "resume": true }
+      ]
+    },
+    {
+      "requires": [
+        {
+          "varp": 281,
+          "value": 230
+        }
+      ],
+      "actions": [ { "tutClickSide": 2 } ]
+    },
+    {
+      "requires": [
+        {
+          "varp": 281,
+          "value": 240
+        }
+      ],
+      "spots": [ { "name": "quest guide" } ],
+      "actions": [
+        {
+          "interact": {
+            "option": "talk-to",
+            "npc": "quest guide"
+          }
+        },
+        { "resume": true },
+        { "resume": true },
+        { "resume": true },
+        { "resume": true },
+        { "resume": true }
+      ]
+    },
+    {
+      "requires": [
+        {
+          "varp": 281,
+          "min": 250,
+          "max": 260
+        }
+      ],
+      "spots": [ { "name": "mining instructor" } ],
+      "actions": [
+        {
+          "interact": {
+            "option": "talk-to",
+            "npc": "mining instructor"
+          }
+        },
+        { "resume": true },
+        { "resume": true },
+        { "resume": true }
+      ]
+    },
+    {
+      "requires": [
+        {
+          "varp": 281,
+          "value": 270
+        }
+      ],
+      "spots": [ { "name": "mining instructor" } ],
+      "actions": [
+        {
+          "interact": {
+            "option": "prospect",
+            "loc": "newbietin"
+          }
+        }
+      ]
+    },
+    {
+      "requires": [
+        {
+          "varp": 281,
+          "value": 275
+        }
+      ],
+      "spots": [ { "name": "mining instructor" } ],
+      "actions": [
+        {
+          "interact": {
+            "option": "prospect",
+            "loc": "newbiecopper"
+          }
+        }
+      ]
+    },
+    {
+      "requires": [
+        {
+          "varp": 281,
+          "value": 280
+        }
+      ],
+      "spots": [ { "name": "mining instructor" } ],
+      "actions": [
+        {
+          "interact": {
+            "option": "talk-to",
+            "npc": "mining instructor"
+          }
+        },
+        { "resume": true },
+        { "resume": true },
+        { "resume": true }
+      ]
+    },
+    {
+      "requires": [
+        {
+          "varp": 281,
+          "value": 290
+        }
+      ],
+      "spots": [ { "name": "mining instructor" } ],
+      "actions": [
+        {
+          "interact": {
+            "option": "mine",
+            "loc": "newbietin"
+          }
+        }
+      ]
+    },
+    {
+      "requires": [
+        {
+          "varp": 281,
+          "value": 295
+        }
+      ],
+      "spots": [ { "name": "mining instructor" } ],
+      "actions": [
+        {
+          "interact": {
+            "option": "mine",
+            "loc": "newbiecopper"
+          }
+        }
+      ]
+    },
+    {
+      "requires": [
+        {
+          "varp": 281,
+          "value": 320
+        }
+      ],
+      "spots": [ { "name": "mining instructor" } ],
+      "actions": [
+        {
+          "interact": {
+            "use": "tin ore",
+            "loc": "newbiefurnace"
+          }
+        }
+      ]
+    },
+    {
+      "requires": [
+        {
+          "varp": 281,
+          "value": 330
+        }
+      ],
+      "spots": [ { "name": "mining instructor" } ],
+      "actions": [
+        {
+          "interact": {
+            "option": "talk-to",
+            "npc": "mining instructor"
+          }
+        },
+        { "resume": true },
+        { "resume": true }
+      ]
+    },
+    {
+      "requires": [
+        {
+          "varp": 281,
+          "value": 340
+        }
+      ],
+      "spots": [ { "name": "mining instructor" } ],
+      "actions": [
+        {
+          "interact": {
+            "use": "bronze bar",
+            "loc": "anvil"
+          }
+        },
+        {
+          "interact": {
+            "option": "make",
+            "inv": "bronze dagger",
+            "invName": "smithing_bronze1",
+            "comId": 1119
+          }
+        }
+      ]
+    },
+    {
+      "requires": [
+        {
+          "varp": 281,
+          "min": 350,
+          "max": 360
+        }
+      ],
+      "spots": [ { "name": "combat instructor" } ],
+      "actions": [
+        {
+          "interact": {
+            "option": "talk-to",
+            "npc": "combat instructor"
+          }
+        },
+        { "resume": true },
+        { "resume": true },
+        { "resume": true },
+        { "resume": true }
+      ]
+    },
+    {
+      "requires": [
+        {
+          "varp": 281,
+          "value": 370
+        }
+      ],
+      "actions": [ { "tutClickSide": 4 } ]
+    },
+    {
+      "requires": [
+        {
+          "varp": 281,
+          "value": 380
+        }
+      ],
+      "actions": [
+        {
+          "interact": {
+            "option": "wield",
+            "inv": "bronze dagger"
+          }
+        }
+      ]
+    },
+    {
+      "requires": [
+        {
+          "varp": 281,
+          "value": 390
+        }
+      ],
+      "spots": [ { "name": "combat instructor" } ],
+      "actions": [
+        {
+          "interact": {
+            "option": "talk-to",
+            "npc": "combat instructor"
+          }
+        },
+        { "resume": true }
+      ]
+    },
+    {
+      "requires": [
+        {
+          "varp": 281,
+          "value": 400
+        }
+      ],
+      "actions": [
+        {
+          "interact": {
+            "option": "wield",
+            "inv": "bronze sword"
+          }
+        },
+        {
+          "interact": {
+            "option": "wield",
+            "inv": "wooden shield"
+          }
+        }
+      ]
+    },
+    {
+      "requires": [
+        {
+          "varp": 281,
+          "value": 410
+        }
+      ],
+      "actions": [ { "tutClickSide": 0 } ]
+    },
+    {
+      "requires": [
+        {
+          "varp": 281,
+          "min": 420,
+          "max": 440
+        }
+      ],
+      "spots": [ { "name": "combat instructor rats" } ],
+      "actions": [
+        {
+          "interact": {
+            "option": "attack",
+            "npc": "giant rat"
+          }
+        },
+        { "interact": { "loot": true } }
+      ]
+    },
+    {
+      "requires": [
+        {
+          "varp": 281,
+          "value": 450
+        }
+      ],
+      "spots": [ { "name": "combat instructor" } ],
+      "actions": [
+        {
+          "interact": {
+            "option": "talk-to",
+            "npc": "combat instructor"
+          }
+        },
+        { "resume": true },
+        { "resume": true },
+        { "resume": true }
+      ]
+    },
+    {
+      "requires": [
+        {
+          "varp": 281,
+          "value": 460
+        }
+      ],
+      "spots": [ { "name": "combat instructor ranged" } ],
+      "actions": [
+        {
+          "interact": {
+            "option": "wield",
+            "inv": "bronze arrow"
+          }
+        },
+        {
+          "interact": {
+            "option": "wield",
+            "inv": "shortbow"
+          }
+        },
+        {
+          "interact": {
+            "option": "attack",
+            "npc": "giant rat",
+            "range": 7,
+            "keepDistance": true
+          }
+        },
+        { "wait": {} },
+        { "wait": {} },
+        { "wait": {} }
+      ]
+    },
+    {
+      "requires": [
+        {
+          "varp": 281,
+          "min": 470,
+          "max": 500
+        }
+      ],
+      "spots": [ { "name": "tutorial bank" } ],
+      "actions": [
+        {
+          "interact": {
+            "option": "use",
+            "loc": "bank booth"
+          }
+        },
+        { "resume": true },
+        { "button": 2461 }
+      ]
+    },
+    {
+      "requires": [
+        {
+          "varp": 281,
+          "min": 510,
+          "max": 520
+        }
+      ],
+      "spots": [ { "name": "financial advisor" } ],
+      "actions": [
+        {
+          "interact": {
+            "option": "talk-to",
+            "npc": "financial advisor"
+          }
+        },
+        { "resume": true },
+        { "resume": true },
+        { "resume": true },
+        { "resume": true },
+        { "resume": true },
+        { "resume": true },
+        { "resume": true },
+        { "resume": true },
+        { "resume": true }
+      ]
+    },
+    {
+      "requires": [
+        {
+          "varp": 281,
+          "min": 530,
+          "max": 540
+        }
+      ],
+      "spots": [ { "name": "brother brace" } ],
+      "actions": [
+        {
+          "interact": {
+            "option": "talk-to",
+            "npc": "brother brace"
+          }
+        },
+        { "resume": true },
+        { "resume": true }
+      ]
+    },
+    {
+      "requires": [
+        {
+          "varp": 281,
+          "value": 550
+        }
+      ],
+      "actions": [ { "tutClickSide": 5 } ]
+    },
+    {
+      "requires": [
+        {
+          "varp": 281,
+          "value": 560
+        }
+      ],
+      "spots": [ { "name": "brother brace" } ],
+      "actions": [
+        {
+          "interact": {
+            "option": "talk-to",
+            "npc": "brother brace"
+          }
+        },
+        { "resume": true },
+        { "resume": true },
+        { "resume": true },
+        { "resume": true }
+      ]
+    },
+    {
+      "requires": [
+        {
+          "varp": 281,
+          "value": 570
+        }
+      ],
+      "actions": [ { "tutClickSide": 8 } ]
+    },
+    {
+      "requires": [
+        {
+          "varp": 281,
+          "value": 580
+        }
+      ],
+      "actions": [ { "tutClickSide": 9 } ]
+    },
+    {
+      "requires": [
+        {
+          "varp": 281,
+          "value": 590
+        }
+      ],
+      "spots": [ { "name": "brother brace" } ],
+      "actions": [
+        {
+          "interact": {
+            "option": "talk-to",
+            "npc": "brother brace"
+          }
+        },
+        { "resume": true },
+        { "resume": true },
+        { "resume": true },
+        { "resume": true },
+        { "resume": true },
+        { "resume": true },
+        { "resume": true },
+        { "resume": true }
+      ]
+    },
+    {
+      "requires": [
+        {
+          "varp": 281,
+          "min": 600,
+          "max": 610
+        }
+      ],
+      "spots": [ { "name": "magic instructor" } ],
+      "actions": [
+        {
+          "interact": {
+            "option": "talk-to",
+            "npc": "magic instructor"
+          }
+        },
+        { "resume": true },
+        { "resume": true }
+      ]
+    },
+    {
+      "requires": [
+        {
+          "varp": 281,
+          "value": 620
+        }
+      ],
+      "actions": [ { "tutClickSide": 6 } ]
+    },
+    {
+      "requires": [
+        {
+          "varp": 281,
+          "value": 630
+        }
+      ],
+      "spots": [ { "name": "magic instructor" } ],
+      "actions": [
+        {
+          "interact": {
+            "option": "talk-to",
+            "npc": "magic instructor"
+          }
+        },
+        { "resume": true },
+        { "resume": true }
+      ]
+    },
+    {
+      "requires": [
+        {
+          "varp": 281,
+          "min": 640,
+          "max": 650
+        }
+      ],
+      "spots": [ { "name": "magic instructor chicken" } ],
+      "actions": [
+        {
+          "interact": {
+            "comId": 1152,
+            "npc": "chicken",
+            "keepDistance": true
+          }
+        }
+      ]
+    },
+    {
+      "requires": [
+        {
+          "varp": 281,
+          "value": 660
+        }
+      ],
+      "spots": [ { "name": "magic instructor chicken" } ],
+      "actions": [
+        {
+          "interact": {
+            "option": "talk-to",
+            "npc": "magic instructor"
+          }
+        },
+        { "resume": true },
+        { "button": 2461 }
+      ]
+    }
+  ]
+}
