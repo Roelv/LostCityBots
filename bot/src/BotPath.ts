@@ -1,14 +1,15 @@
 import { CoordGrid } from '#/engine/CoordGrid.js';
 import Player from '#/engine/entity/Player.js';
-import { findPath, isIndoors, isMapBlocked } from '#/engine/GameMap.js';
-import { BotData, Node, Spot } from './BotData.js';
+import { findPath, isMapBlocked } from '#/engine/GameMap.js';
+import { Action, BotData, Node, Spot } from './BotData.js';
 import { dijkstra, directPath } from './BotPathFinder.js';
 import { distance, random } from './Utility.js';
-import { opEntity } from './action/OpEntity.js';
 
 export class BotPath {
     private player: Player;
     waypoints: number[] = [];
+    actions: Action[] = [];
+    stage = { value: 0 };
     private triedNodes: Node[] = [];
 
     constructor(player: Player) {
@@ -16,6 +17,7 @@ export class BotPath {
     }
 
     tick(): boolean {
+        this.actions = [];
         if (this.player.hasWaypoints()) {
             if (!this.player.isActive) return true;
             if (this.player.stepsTaken > 0) return true;
@@ -35,6 +37,7 @@ export class BotPath {
         let b = BotData.nodes[dest];
         if (this.isPlayerAt(b)) {
             this.waypoints.pop();
+            this.stage.value = 0;
             if (this.waypoints.length < 2) return false;
             src = dest;
             a = b;
@@ -55,24 +58,13 @@ export class BotPath {
                 continue;
             }
 
-            const pIndoors = isIndoors(this.player.x, this.player.z, this.player.level);
-            const bIndoors = isIndoors(b.coord[0], b.coord[1], b.coord[2] ?? 0);
-            if (link.action) {
-                if (link.action.interact) {
-                    if (opEntity(this.player, link.action.interact, src)) {
-                        return true;
-                    }
-                    // Walking to entity.
-                    if (this.player.hasWaypoints()) {
-                        return true;
-                    }
-                }
-            } else if (pIndoors !== bIndoors) {
-                const interact = { option: 'open', loc: 'door', range: 1 };
-                if (opEntity(this.player, interact, src)) {
-                    return true;
-                }
+            if (link.actions && this.stage.value < link.actions.length) {
+                this.actions = link.actions;
+                return false;
             }
+
+            this.stage.value = 0;
+            break;
         }
 
         this.pathToNode(b);

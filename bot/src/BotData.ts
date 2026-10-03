@@ -2,6 +2,7 @@ import { readdirSync, readFileSync } from 'fs';
 import { dirname, join } from 'path';
 import { fileURLToPath } from 'url';
 import { PlayerStatMap } from '#/engine/entity/PlayerStat.js';
+import { isIndoors } from '#/engine/GameMap.js';
 const dir = dirname(fileURLToPath(import.meta.url));
 
 export interface Task {
@@ -24,7 +25,7 @@ export interface Spot {
     slots?: number;
 }
 
-interface Action {
+export interface Action {
     requires?: Require[];
     wait?: Wait;
     repeat?: number;
@@ -63,7 +64,7 @@ export interface Node {
 
 interface Link {
     coord: number[];
-    action?: Action;
+    actions?: Action[];
 }
 
 export class BotData {
@@ -111,6 +112,15 @@ export class BotData {
                 }
                 const content = readFileSync(fileName, 'utf8');
                 for (const node of JSON.parse(content).nodes) {
+                    if (node.links) {
+                        const nodeIndoors = isIndoors(node.coord[0], node.coord[1], node.coord[2] ?? 0);
+                        for (const link of node.links) {
+                            const linkIndoors = isIndoors(link.coord[0], link.coord[1], link.coord[2] ?? 0);
+                            if (!link.actions && nodeIndoors !== linkIndoors) {
+                                link.actions = [{ interact: { option: 'open', loc: 'door', range: 1 } }];
+                            }
+                        }
+                    }
                     this.nodes.push(node);
                 }
             }

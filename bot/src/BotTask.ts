@@ -21,7 +21,7 @@ export class BotTask {
     release = false;
     task: Task | null = null;
     private spot: Spot | null = null;
-    private stage = 0;
+    private stage = { value: 0 };
     private lastEntity: Loc | Npc | Obj | null = null;
     private lastCombat = 0;
 
@@ -51,7 +51,12 @@ export class BotTask {
             }
         }
 
-        if (!this.task.actions) {
+        let actions = this.task.actions;
+        let stage = this.stage;
+        if (this.path.actions.length > 0) {
+            actions = this.path.actions;
+            stage = this.path.stage;
+        } else if (!actions) {
             this.release = true;
             return true;
         }
@@ -72,8 +77,8 @@ export class BotTask {
             }
         }
 
-        while (this.stage < this.task.actions.length) {
-            let action = this.task.actions[this.stage];
+        while (stage.value < actions.length) {
+            let action = actions[stage.value];
             let done = false;
             let retry = false;
 
@@ -96,8 +101,8 @@ export class BotTask {
                     done = true;
                 }
             } else if (action.repeat) {
-                this.stage -= action.repeat;
-                if (this.stage < 0) this.stage = 0;
+                stage.value -= action.repeat;
+                if (stage.value < 0) stage.value = 0;
                 retry = true;
             } else if (action.interact) {
                 const ai = action.interact;
@@ -117,7 +122,8 @@ export class BotTask {
                         }
                     }
                 } else if (ai.loc || ai.npc || ai.obj) {
-                    const entity = opEntity(this.player, ai, this.path.waypoints[0]);
+                    let src = this.path.waypoints[this.path.waypoints.length - 1];
+                    const entity = opEntity(this.player, ai, src);
                     if (entity) {
                         this.lastEntity = entity;
                         done = true;
@@ -146,14 +152,26 @@ export class BotTask {
                 done = true;
             }
 
-            if (done) this.stage++;
-            if (this.stage >= this.task.actions.length) {
+            if (this.path.actions.length > 0 && !done) {
+                done = true;
+                retry = true;
+            }
+            if (done) {
+                stage.value++;
+            }
+            if (stage.value >= actions.length) {
                 break;
             }
-            if (!retry) return true;
+            if (!retry) {
+                return true;
+            }
         }
 
-        this.release = true;
+        if (this.path.actions.length > 0) {
+            this.path.tick();
+        } else {
+            this.release = true;
+        }
         return true;
     }
 
@@ -261,6 +279,6 @@ export class BotTask {
         this.release = false;
         this.task = null;
         this.spot = null;
-        this.stage = 0;
+        this.stage.value = 0;
     }
 }
