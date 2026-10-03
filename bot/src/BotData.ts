@@ -13,8 +13,10 @@ export interface Task {
 
 export interface Require {
     varp?: number;
-    inv?: string;
     stat?: string;
+    owns?: string;
+    inv?: string;
+    worn?: string;
     value?: number;
     min?: number;
     max?: number;

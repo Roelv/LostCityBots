@@ -71,7 +71,7 @@
           "max": 40
         },
         {
-          "inv": "logs",
+          "owns": "logs",
           "value": 0
         }
       ],
@@ -93,7 +93,7 @@
           "value": 40
         },
         {
-          "inv": "logs",
+          "owns": "logs",
           "min": 1
         }
       ],
@@ -142,7 +142,7 @@
           "max": 80
         },
         {
-          "inv": "raw shrimps",
+          "owns": "raw shrimps",
           "max": 1
         }
       ],
